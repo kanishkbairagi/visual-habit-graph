@@ -164,17 +164,17 @@ function App() {
   const keystoneHabit = habits.find(h => h.id === algorithms.centrality?.keystoneNodeId);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 p-6 md:p-8 font-sans selection:bg-indigo-500 selection:text-white">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <div className="min-h-screen bg-slate-950 text-slate-100 p-3 sm:p-5 md:p-8 font-sans selection:bg-indigo-500 selection:text-white">
+      <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6">
         {/* Top Header & Architecture Badge Bar */}
-        <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800">
+        <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4 pb-3 sm:pb-4 border-b border-slate-800">
           <div>
-            <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
                 Visual Habit Graph
               </h1>
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
-                DAG Algorithm Engine
+              <span className="px-2 py-0.5 rounded-full text-[11px] sm:text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
+                DAG Engine
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1 max-w-2xl">
@@ -200,38 +200,38 @@ function App() {
         </header>
 
         {/* Action Toolbar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-slate-900/60 rounded-xl border border-slate-800">
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => setShowInspector(true)}
-              className="px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition flex items-center gap-2 shadow-lg shadow-indigo-600/20"
+              className="px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-lg shadow-indigo-600/20"
             >
               <span>🔬</span>
-              <span>Inspect CS Algorithms & Complexity</span>
+              <span>Inspect CS Algorithms</span>
             </button>
 
             <button
               onClick={() => setShowBuilder(true)}
-              className="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition flex items-center gap-2"
+              className="px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition flex items-center gap-1.5"
             >
               <span>⚙️</span>
-              <span>DAG Builder & Cycle Tester</span>
+              <span>DAG Builder</span>
             </button>
 
             <button
               onClick={() => setShowCriticalPath(prev => !prev)}
-              className={`px-3.5 py-2 rounded-lg border text-xs font-medium transition flex items-center gap-2 ${
+              className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg border text-xs font-medium transition flex items-center gap-1.5 ${
                 showCriticalPath
                   ? 'bg-amber-500/10 border-amber-500/40 text-amber-300'
                   : 'bg-slate-800 border-slate-700 text-slate-400'
               }`}
             >
               <span>⚡</span>
-              <span>Critical Path Mode: {showCriticalPath ? 'ON' : 'OFF'}</span>
+              <span>CPM: {showCriticalPath ? 'ON' : 'OFF'}</span>
             </button>
           </div>
 
-          <div className="text-xs text-slate-400 flex items-center gap-3">
+          <div className="text-xs text-slate-400 flex flex-wrap items-center gap-3">
             <span>Vertices |V|: <strong className="text-white">{habits.length}</strong></span>
             <span>Edges |E|: <strong className="text-cyan-400">{edges.length}</strong></span>
             <span>Invariant: <strong className="text-emerald-400">Valid DAG</strong></span>
@@ -239,13 +239,13 @@ function App() {
         </div>
 
         {/* Keystone & Critical Path Insight Banner */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-3.5 bg-gradient-to-r from-amber-950/30 to-slate-900 border border-amber-500/30 rounded-xl flex items-center gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+          <div className="p-3 sm:p-3.5 bg-gradient-to-r from-amber-950/30 to-slate-900 border border-amber-500/30 rounded-xl flex items-center gap-3">
             <div className="p-2 bg-amber-500/20 text-amber-300 rounded-lg text-lg">
               ★
             </div>
             <div>
-              <div className="text-xs text-amber-300 font-semibold uppercase tracking-wider">
+              <div className="text-[11px] sm:text-xs text-amber-300 font-semibold uppercase tracking-wider">
                 Keystone Habit (Max Centrality)
               </div>
               <div className="text-sm font-bold text-white mt-0.5">
