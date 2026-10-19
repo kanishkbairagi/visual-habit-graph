@@ -346,9 +346,9 @@ const AlgorithmInspectorModal = ({ isOpen, onClose, nodes, edges, algorithms, is
               </div>
 
               <div className="p-4 bg-slate-950/40 rounded-xl border border-slate-800 text-xs space-y-2">
-                <div className="font-semibold text-white">Why This Impresses Graduate Admissions:</div>
+                <div className="font-semibold text-white">Engineering Motivation & Design Philosophy:</div>
                 <p className="text-slate-400 leading-relaxed">
-                  Most student portfolios showcase generic CRUD applications. This project treats routine building as a formal <strong>Directed Acyclic Graph (DAG)</strong> optimization problem, combining theoretical algorithmic invariants (\(O(V+E)\) cycle prevention, topological ordering, and dynamic programming bottleneck identification) with a production-grade full-stack architecture.
+                  Unlike conventional habit applications that rely on flat, disconnected checklists, this project treats routine building as a formal <strong>Directed Acyclic Graph (DAG)</strong> optimization problem, combining theoretical algorithmic invariants (\(O(V+E)\) cycle prevention, topological ordering, and dynamic programming bottleneck identification) with a production-grade full-stack architecture.
                 </p>
               </div>
             </div>
@@ -358,7 +358,7 @@ const AlgorithmInspectorModal = ({ isOpen, onClose, nodes, edges, algorithms, is
         {/* Modal Footer */}
         <div className="p-4 border-t border-slate-800 bg-slate-950/80 flex items-center justify-between">
           <div className="text-xs text-slate-500">
-            Engineered for Academic Research & MS in Computer Science Portfolio Showcase
+            Open-Source Graph Theory & Behavioral Systems Project
           </div>
           <button
             onClick={onClose}

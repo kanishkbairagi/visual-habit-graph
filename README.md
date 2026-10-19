@@ -1,6 +1,6 @@
-n# Visual Habit Graph (VHG)
+# Visual Habit Graph (VHG)
 > **A Directed Acyclic Graph (DAG) Routine Engine & Behavioral Optimization System**  
-> *Developed as an undergraduate research and software engineering showcase for MS in Computer Science admissions.*
+> *An open-source systems project exploring graph theory applications, cycle invariants, and dynamic programming in routine scheduling.*
 
 [![DAG Invariant](https://img.shields.io/badge/Graph%20Invariant-Directed%20Acyclic%20Graph-blue.svg)](#theoretical-foundation)
 [![Time Complexity](https://img.shields.io/badge/Complexity-O(|V|%20%2B%20|E|)-emerald.svg)](#algorithmic-complexity-analysis)
@@ -148,7 +148,8 @@ node tests/graphEngine.test.js
 
 ---
 
-## 7. Graduate Admissions Highlights
-* **Theoretical Rigor:** Formulates routine management as a formal graph theory optimization problem.
-* **Algorithmic Correctness:** Proven cycle detection and topological resolution in linear time $\mathcal{O}(|V| + |E|)$.
-* **Full-Stack Proficiency:** Complete MERN stack implementation with separation of concerns between presentation, business logic, algorithmic engines, and persistence.
+## 7. Engineering Highlights & Design Philosophy
+* **Formal Modeling:** Formulates daily routines as a rigorous Directed Acyclic Graph (DAG) rather than a simplistic linear checklist.
+* **Algorithmic Correctness:** Enforces $\mathcal{O}(|V| + |E|)$ cycle prevention and Kahn's topological sequencing to eliminate execution deadlocks.
+* **Operational Optimization:** Leverages Critical Path Method (CPM) dynamic programming to expose real-time routine bottlenecks.
+* **Decoupled Architecture:** Clean separation of concerns across presentation (React + D3.js), API controllers (Express), graph services, and persistence (MongoDB).
